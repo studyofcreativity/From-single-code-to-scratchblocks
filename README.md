@@ -16,8 +16,10 @@ From-single-code-to-scratchblocks/
 ├── translator.js
 └── README.md
 
+
 ## Uso
-1. Abre `index.html` en un navegador.
+1. Abre la página en tu navegador.
 2. Pega tu **código único** en el área de texto.
 3. Selecciona el idioma.
 4. Haz clic en **Convertir a Scratchblocks**.
+
