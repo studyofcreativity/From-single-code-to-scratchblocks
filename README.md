@@ -8,3 +8,16 @@ Este proyecto convierte un **código único** (formato propio) en bloques visual
 - Compatible con **estilo Scratch 3**.
 
 ## Estructura
+From-single-code-to-scratchblocks/
+├── index.html
+├── style.css
+├── main.js
+├── decoder.js
+├── translator.js
+└── README.md
+
+## Uso
+1. Abre `index.html` en un navegador.
+2. Pega tu **código único** en el área de texto.
+3. Selecciona el idioma.
+4. Haz clic en **Convertir a Scratchblocks**.
