@@ -1,16 +1,10 @@
-# From-single-code-to-scratchblocks
+# From Single Code to Scratchblocks
 
-Este proyecto convierte tu código único en bloques Scratch utilizando Scratchblocks.
+Este proyecto convierte un **código único** (formato propio) en bloques visuales de Scratch usando la librería [scratchblocks](https://scratchblocks.github.io/).
 
-## ¿Qué hace?
-- Decodifica tu código único.
-- Lo traduce a sintaxis Scratchblocks.
-- Lo muestra de forma visual estilo Scratch 3.0.
+## Características
+- Soporte para **todos los idiomas que soporta scratchblocks**.
+- Interfaz simple para pegar código y convertirlo.
+- Compatible con **estilo Scratch 3**.
 
-## Cómo usar
-1. Pega tu código único.
-2. Elige un idioma.
-3. Presiona “Translate”.
-4. ¡Listo! Verás tus bloques Scratch.
-
----
+## Estructura
