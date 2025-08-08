@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>From Single Code to Scratchblocks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>From Single Code to Scratchblocks</h1>
+
+  <label for="language">🌐 Select Language:</label>
+  <select id="language">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+  </select>
+
+  <textarea id="inputCode" placeholder="Paste your unique code here..."></textarea>
+
+  <button id="translateBtn">🔄 Translate to Scratchblocks</button>
+
+  <h2>🧱 Scratchblocks Result</h2>
+  <pre id="scratchblocksOutput" class="scratchblocks"></pre>
+
+  <script src="decoder.js"></script>
+  <script src="translator.js"></script>
+  <script src="main.js"></script>
+  <script src="https://scratchblocks.github.io/js/scratchblocks-v3.4-min.js"></script>
+</body>
+</html>
