@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>From Single Code to Scratchblocks</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>From Single Code to Scratchblocks</title>
+<link rel="stylesheet" href="style.css" />
+<!-- Librería oficial de scratchblocks -->
+<script src="https://unpkg.com/scratchblocks@3.5.2/build/scratchblocks.min.js"></script>
 </head>
 <body>
-  <h1>From Single Code to Scratchblocks</h1>
+  <div class="container">
+    <h1>From Single Code to Scratchblocks</h1>
 
-  <label for="language">🌐 Select Language:</label>
-  <select id="language">
-    <option value="en">English</option>
-    <option value="es">Español</option>
-  </select>
+    <label for="lang">Idioma de bloques:</label>
+    <select id="lang"></select>
 
-  <textarea id="inputCode" placeholder="Paste your unique code here..."></textarea>
+    <textarea id="inputCode" placeholder="Pega tu código único aquí..."></textarea>
 
-  <button id="translateBtn">🔄 Translate to Scratchblocks</button>
+    <div class="buttons">
+      <button id="convertButton">Convertir a Scratchblocks</button>
+    </div>
 
-  <h2>🧱 Scratchblocks Result</h2>
-  <pre id="scratchblocksOutput" class="scratchblocks"></pre>
+    <div id="outputBlocks"></div>
+  </div>
 
   <script src="decoder.js"></script>
   <script src="translator.js"></script>
   <script src="main.js"></script>
-  <script src="https://scratchblocks.github.io/js/scratchblocks-v3.4-min.js"></script>
 </body>
 </html>
