@@ -1,12 +1,17 @@
-function decodeCode(code) {
-  // Aquí va el mismo código de decoder.js que ya usas.
-  // Ejemplo simple (debes ajustar con tu lógica real):
-  const dictionary = {
-    '◆': 'move 10 steps',
-    '■': 'turn cw 15 degrees',
-    '▲': 'say Hello! for 2 seconds',
-    '●': 'repeat 10'
+// decoder.js
+// Convierte el "código único" a código normal de Scratch
+
+function decodeUniqueCode(uniqueCode) {
+  // Diccionario de ejemplo (tendrás que poner el real de tu proyecto anterior)
+  const specialMap = {
+    "/noise(no existe)": "move 10 steps",
+    "/loop(espiral sin fin)": "repeat 10",
+    // ... agrega todas tus reglas
   };
-  
-  return code.split('\n').map(line => dictionary[line.trim()] || '').join('\n');
+
+  let decoded = uniqueCode;
+  for (const [symbol, replacement] of Object.entries(specialMap)) {
+    decoded = decoded.split(symbol).join(replacement);
+  }
+  return decoded;
 }
