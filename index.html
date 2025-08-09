@@ -4,31 +4,30 @@
     <meta charset="UTF-8">
     <title>From Single Code to Scratchblocks</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/scratchblocks"></script>
+    <!-- Librería scratchblocks -->
+    <script src="https://scratchblocks.github.io/js/scratchblocks-v3.6-min.js"></script>
 </head>
 <body>
-    <h1>From Single Code to Scratchblocks</h1>
+    <header>
+        <h1>From Single Code to Scratchblocks</h1>
+    </header>
 
-    <textarea id="inputCode" placeholder="Pega aquí tu código único..."></textarea>
+    <main>
+        <section>
+            <label for="codeInput">Código único:</label>
+            <textarea id="codeInput" placeholder="Pega tu código único aquí"></textarea>
 
-    <div class="controls">
-        <label for="lang">Idioma:</label>
-        <select id="lang">
-            <option value="en">English</option>
-            <option value="es">Español (España)</option>
-            <option value="es-419">Español (Latinoamérica)</option>
-            <option value="fr">Français</option>
-            <option value="pt">Português</option>
-            <option value="de">Deutsch</option>
-            <option value="ja">日本語 (Japonés)</option>
-            <option value="zh-cn">中文 (Simplificado)</option>
-            <option value="zh-tw">中文 (Tradicional)</option>
-            <!-- Aquí puedes agregar más idiomas soportados -->
-        </select>
-        <button id="convertBtn">Convertir a Scratchblocks</button>
-    </div>
+            <label for="languageSelect">Idioma:</label>
+            <select id="languageSelect"></select>
 
-    <div id="outputBlocks" class="blocks"></div>
+            <button id="convertBtn">Convertir a Scratchblocks</button>
+        </section>
+
+        <section>
+            <h2>Bloques generados:</h2>
+            <div id="scratchOutput" class="blocks"></div>
+        </section>
+    </main>
 
     <script src="decoder.js"></script>
     <script src="translator.js"></script>
