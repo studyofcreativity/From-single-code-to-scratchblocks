@@ -1,17 +1,18 @@
-// decoder.js
-// Convierte el "código único" a código normal de Scratch
+// Diccionario ficticio para ejemplo (debes poner el tuyo real)
+const specialMap = {
+    "/saludo/": "say [Hola] for (2) seconds",
+    "/loopforever/": "forever",
+    "/setnum0/": "set [numero v] to (0)",
+    "/changenum1/": "change [numero v] by (1)",
+    "/ifelse/": "if <> then\nelse"
+};
 
-function decodeUniqueCode(uniqueCode) {
-  // Diccionario de ejemplo (tendrás que poner el real de tu proyecto anterior)
-  const specialMap = {
-    "/noise(no existe)": "move 10 steps",
-    "/loop(espiral sin fin)": "repeat 10",
-    // ... agrega todas tus reglas
-  };
-
-  let decoded = uniqueCode;
-  for (const [symbol, replacement] of Object.entries(specialMap)) {
-    decoded = decoded.split(symbol).join(replacement);
-  }
-  return decoded;
+// Función para decodificar desde código único
+function decodeSpecialCode(uniqueCode) {
+    let result = uniqueCode;
+    for (const key in specialMap) {
+        const regex = new RegExp(key, "g");
+        result = result.replace(regex, specialMap[key]);
+    }
+    return result;
 }
