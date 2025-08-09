@@ -1,25 +1,29 @@
 # From Single Code to Scratchblocks
 
-Este proyecto convierte un **código único** (formato propio) en bloques visuales de Scratch usando la librería [scratchblocks](https://scratchblocks.github.io/).
+Convierte un **código único** (propietario) en bloques visuales de Scratch usando `scratchblocks`.
 
 ## Características
-- Soporte para **todos los idiomas que soporta scratchblocks**.
-- Interfaz simple para pegar código y convertirlo.
-- Compatible con **estilo Scratch 3**.
-
-## Estructura
-From-single-code-to-scratchblocks/
-├── index.html
-├── style.css
-├── main.js
-├── decoder.js
-├── translator.js
-└── README.md
-
+- Soporta todos los idiomas principales de Scratch.
+- Muestra bloques SVG como en la web oficial.
+- Interfaz limpia y fácil de usar.
 
 ## Uso
-1. Abre la página en tu navegador.
-2. Pega tu **código único** en el área de texto.
-3. Selecciona el idioma.
+1. Abre la página.
+2. Pega tu código único en el área de texto.
+3. Selecciona un idioma.
 4. Haz clic en **Convertir a Scratchblocks**.
+5. Los bloques aparecerán renderizados visualmente.
 
+## Ejemplo de código único
+/saludo/
+/loopforever/
+/setnum0/
+/changenum1/
+/ifelse/
+
+shell
+Copy
+Edit
+
+## Resultado esperado
+Bloques de Scratch en SVG listos para exportar o capturar.
