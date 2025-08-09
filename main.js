@@ -1,21 +1,32 @@
-// main.js
-document.getElementById("convertButton").addEventListener("click", () => {
-  const uniqueCode = document.getElementById("inputCode").value.trim();
-  const lang = document.getElementById("lang").value;
+window.addEventListener("DOMContentLoaded", () => {
+    loadLanguages();
 
-  if (!uniqueCode) {
-    alert("Por favor, pega tu código único.");
-    return;
-  }
+    document.getElementById("convertBtn").addEventListener("click", () => {
+        const uniqueCode = document.getElementById("codeInput").value.trim();
+        const lang = document.getElementById("languageSelect").value;
 
-  // 1. Decodificar código único a código Scratch normal
-  const scratchCode = decodeUniqueCode(uniqueCode);
+        if (!uniqueCode) {
+            alert("Por favor, pega tu código único.");
+            return;
+        }
 
-  // 2. Convertir a bloques Scratchblocks
-  const rendered = translateToScratchblocks(scratchCode, lang);
+        // 1. Decodificar el código único
+        const scratchCode = decodeSpecialCode(uniqueCode);
 
-  // 3. Mostrar en pantalla
-  const output = document.getElementById("outputBlocks");
-  output.innerHTML = "";
-  output.appendChild(rendered);
+        // 2. Limpiar el contenedor
+        const outputDiv = document.getElementById("scratchOutput");
+        outputDiv.innerHTML = "";
+
+        // 3. Crear elemento para scratchblocks
+        const pre = document.createElement("pre");
+        pre.className = "blocks";
+        pre.textContent = scratchCode;
+        outputDiv.appendChild(pre);
+
+        // 4. Renderizar como SVG
+        scratchblocks.renderMatching("pre.blocks", {
+            style: "scratch3",
+            languages: [lang]
+        });
+    });
 });
